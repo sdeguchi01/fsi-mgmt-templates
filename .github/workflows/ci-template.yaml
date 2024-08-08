@@ -7,7 +7,7 @@ jobs:
   validate:
     name: Validate Terraform
     runs-on:
-      self-hosted
+      ubuntu-latest
     environment: fsi-mgmt-plan
     steps:
       - name: Checkout Code
@@ -31,7 +31,7 @@ jobs:
     name: Validate Terraform Plan
     needs: validate
     runs-on:
-      self-hosted
+      ubuntu-latest
     concurrency: mgmt-tfstate
     environment: fsi-mgmt-plan
     permissions:

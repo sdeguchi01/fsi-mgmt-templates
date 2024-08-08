@@ -12,7 +12,7 @@ jobs:
   plan:
     name: Plan with Terraform
     runs-on:
-      self-hosted
+      ubuntu-latest
     concurrency: mgmt-tfstate
     environment: fsi-mgmt-plan
     permissions:
@@ -68,7 +68,7 @@ jobs:
     needs: plan
     name: Apply with Terraform
     runs-on:
-      self-hosted
+      ubuntu-latest
     concurrency: mgmt-tfstate
     environment: fsi-mgmt-apply
     permissions:
